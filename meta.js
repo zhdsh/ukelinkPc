@@ -51,17 +51,17 @@ module.exports = {
     autoInstall: {
       when: 'isNotTest',
       type: 'list',
-      message: 'Should we run `npm install` for you after the project has been created? (recommended)',
+      message: '项目创建后自动安装依赖吗？',
       choices: [
         {
-          name: 'Yes, use NPM',
+          name: '使用npm安装',
           value: 'npm',
-          short: 'npm',
+          short: '自动安装',
         },
         {
-          name: 'No, I will handle that myself',
+          name: '不用自动安装，我自己手动安装',
           value: false,
-          short: 'no',
+          short: '不自动安装',
         },
       ],
     },
@@ -87,5 +87,5 @@ module.exports = {
     } else {
       printMessage(data, chalk)
     }
-  },
+  }
 }
